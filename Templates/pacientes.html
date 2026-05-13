@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacientes</title>
+</head>
+
+<body bgcolor="#0f172a">
+
+<center>
+
+    <br><br>
+
+    <h1 style="color:white; font-size:55px;">
+        Registro de Pacientes
+    </h1>
+
+    <br>
+
+    <div style="
+        background:#1e293b;
+        width:600px;
+        padding:40px;
+        border-radius:15px;
+    ">
+
+        <form method="POST">
+
+            <input type="text" name="nombre" placeholder="Nombre del paciente"
+            style="
+                width:500px;
+                height:50px;
+                font-size:20px;
+                border-radius:10px;
+                border:none;
+                padding-left:15px;
+            " required>
+
+            <br><br>
+
+            <input type="number" name="edad" placeholder="Edad"
+            style="
+                width:500px;
+                height:50px;
+                font-size:20px;
+                border-radius:10px;
+                border:none;
+                padding-left:15px;
+            " required>
+
+            <br><br>
+
+            <input type="text" name="enfermedad" placeholder="Enfermedad"
+            style="
+                width:500px;
+                height:50px;
+                font-size:20px;
+                border-radius:10px;
+                border:none;
+                padding-left:15px;
+            " required>
+
+            <br><br>
+
+            <input type="text" name="telefono" placeholder="Teléfono"
+            style="
+                width:500px;
+                height:50px;
+                font-size:20px;
+                border-radius:10px;
+                border:none;
+                padding-left:15px;
+            " required>
+
+            <br><br>
+
+            <button type="submit"
+            style="
+                width:520px;
+                height:55px;
+                font-size:22px;
+                background:#16a34a;
+                color:white;
+                border:none;
+                border-radius:10px;
+                cursor:pointer;
+            ">
+                Guardar Paciente
+            </button>
+
+        </form>
+
+    </div>
+
+    <br><br>
+
+    <h2 style="color:white; font-size:40px;">
+        Pacientes Registrados
+    </h2>
+
+    {% for paciente in pacientes %}
+
+    <div style="
+        background:#1e293b;
+        width:600px;
+        padding:20px;
+        border-radius:15px;
+        margin-top:20px;
+        color:white;
+        font-size:22px;
+    ">
+
+        <p><b>Nombre:</b> {{ paciente.nombre }}</p>
+
+        <p><b>Edad:</b> {{ paciente.edad }}</p>
+
+        <p><b>Enfermedad:</b> {{ paciente.enfermedad }}</p>
+
+        <p><b>Teléfono:</b> {{ paciente.telefono }}</p>
+
+    </div>
+
+    {% endfor %}
+
+    <br><br>
+
+    <a href="/dashboard">
+        <button style="
+            width:250px;
+            height:55px;
+            font-size:22px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+        ">
+            Volver
+        </button>
+    </a>
+
+    <br><br><br>
+
+</center>
+
+</body>
+</html>
