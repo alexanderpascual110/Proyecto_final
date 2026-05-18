@@ -13,3 +13,5 @@ Miranda EScobar Yaretzi Soledad
 PROGRAMACION
 <img width="150" height="190" alt="WhatsApp Image 2026-04-22 at 10 43 24 AM" src="https://github.com/user-attachments/assets/bedaeaab-aba1-43b2-9c54-5d974d8cf75e" />
 
+# Descripcion 
+## Esta aplicacion es para los doctores en la cual puedas crear una cuenta o si ya tienes iniciar sesion nomas 
