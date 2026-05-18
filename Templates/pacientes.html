@@ -118,6 +118,23 @@
 
         <p><b>Teléfono:</b> {{ paciente.telefono }}</p>
 
+        <br>
+
+<a href="/eliminar/{{ paciente._id }}">
+    <button style="
+        width:200px;
+        height:45px;
+        font-size:18px;
+        background:#dc2626;
+        color:white;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+    ">
+        Eliminar Paciente
+    </button>
+</a> 
+
     </div>
 
     {% endfor %}

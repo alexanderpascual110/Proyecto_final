@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Recuperar Contraseña</title>
 </head>
 
 <body bgcolor="#0f172a">
@@ -18,13 +18,15 @@
         border-radius:15px;
     ">
 
-        <h1 style="color:white; font-size:45px;">
-            Iniciar Sesión
+        <h1 style="color:white; font-size:40px;">
+            Recuperar Contraseña
         </h1>
 
         <form method="POST">
 
-            <input type="email" name="correo" placeholder="Correo"
+            <input type="email" name="correo"
+            placeholder="Ingresa tu correo"
+
             style="
                 width:400px;
                 height:50px;
@@ -36,20 +38,8 @@
 
             <br><br>
 
-            <input type="password" name="password" placeholder="Contraseña"
-            style="
-                width:400px;
-                height:50px;
-                font-size:20px;
-                border-radius:10px;
-                border:none;
-                padding-left:15px;
-            " required>
-
-            <br><br>
-
-            
             <button type="submit"
+
             style="
                 width:420px;
                 height:55px;
@@ -60,18 +50,8 @@
                 border-radius:10px;
                 cursor:pointer;
             ">
-                Entrar
+                Enviar Código
             </button>
-
-<br><br>
-
-<a href="/forgot" style="
-    color:#60a5fa;
-    font-size:18px;
-    text-decoration:none;
-">
-    ¿Olvidaste tu contraseña?
-</a>
 
         </form>
 
