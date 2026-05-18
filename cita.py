@@ -5,9 +5,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 app.secret_key = "uv_citas_secret"
 
-# ==============================
-# CONEXION MONGODB ATLAS
-# ==============================
+
 
 MONGO_URI = "mongodb+srv://alexanderpascual110:<alex0606>@cluster0.moyfkit.mongodb.net/?appName=Cluster0"
 
@@ -26,9 +24,7 @@ except Exception as error:
 
     print("Error de conexión:", error)
 
-# ==============================
-# BASE DE DATOS
-# ==============================
+
 
 db = cliente["citas_medicas"]
 
@@ -36,18 +32,14 @@ usuarios = db["usuarios"]
 
 pacientes = db["pacientes"]
 
-# ==============================
-# PAGINA PRINCIPAL
-# ==============================
+
 
 @app.route("/")
 def inicio():
 
     return render_template("index.html")
 
-# ==============================
-# REGISTRO
-# ==============================
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -70,9 +62,7 @@ def register():
 
     return render_template("register.html")
 
-# ==============================
-# LOGIN
-# ==============================
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -101,9 +91,7 @@ def login():
 
     return render_template("login.html")
 
-# ==============================
-# DASHBOARD
-# ==============================
+
 
 @app.route("/dashboard")
 def dashboard():
@@ -117,9 +105,7 @@ def dashboard():
         usuario=session["usuario"]
     )
 
-# ==============================
-# PACIENTES
-# ==============================
+
 
 @app.route("/pacientes", methods=["GET", "POST"])
 def pacientes_view():
@@ -153,9 +139,7 @@ def pacientes_view():
         pacientes=lista_pacientes
     )
 
-# ==============================
-# ELIMINAR PACIENTE
-# ==============================
+
 
 @app.route("/eliminar/<id>")
 def eliminar(id):
@@ -168,9 +152,7 @@ def eliminar(id):
 
     return redirect("/pacientes")
 
-# ==============================
-# CERRAR SESION
-# ==============================
+
 
 @app.route("/logout")
 def logout():
@@ -179,9 +161,7 @@ def logout():
 
     return redirect("/")
 
-# ==============================
-# EJECUTAR
-# ==============================
+
 
 if __name__ == "__main__":
 
