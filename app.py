@@ -17,12 +17,12 @@ codigo_recuperacion = {}
 usuarios = []
 pacientes = []
 
-# INICIO
+
 @app.route("/")
 def inicio():
     return render_template("index.html")
 
-# REGISTRO
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
 
@@ -40,7 +40,7 @@ def register():
 
     return render_template("register.html")
 
-# LOGIN
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
 
@@ -61,7 +61,7 @@ def login():
 
     return render_template("login.html")
 
-# RECUPERAR CONTRASEÑA
+
 @app.route("/forgot", methods=["GET", "POST"])
 def forgot():
 
@@ -101,7 +101,7 @@ Tu código de recuperación es:
 
     return render_template("forgot.html")
 
-# NUEVA CONTRASEÑA
+
 @app.route("/reset/<correo>", methods=["GET", "POST"])
 def reset(correo):
 
@@ -130,7 +130,7 @@ def reset(correo):
 
     return render_template("reset.html", correo=correo)
 
-# NUEVA CONTRASEÑA
+
 @app.route("/reset/<correo>", methods=["GET", "POST"])
 def reset_password(correo):
 
@@ -159,7 +159,7 @@ def reset_password(correo):
 
     return render_template("reset.html", correo=correo)
 
-# DASHBOARD
+
 @app.route("/dashboard")
 def dashboard():
 
@@ -169,7 +169,7 @@ def dashboard():
 
     return redirect("/login")
 
-# PACIENTES
+
 @app.route("/pacientes", methods=["GET", "POST"])
 def pacientes_view():
 
@@ -189,7 +189,7 @@ def pacientes_view():
 
     return render_template("pacientes.html", pacientes=pacientes)
 
-# ELIMINAR PACIENTE
+
 @app.route("/eliminar/<int:id>")
 def eliminar(id):
 
@@ -201,7 +201,7 @@ def eliminar(id):
 
     return redirect("/pacientes")
 
-# CERRAR SESION
+
 @app.route("/logout")
 def logout():
 
