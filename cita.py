@@ -7,7 +7,7 @@ app.secret_key = "uv_citas_secret"
 
 
 
-MONGO_URI = "mongodb+srv://alexanderpascual110:<alex0606>@cluster0.moyfkit.mongodb.net/?appName=Cluster0"
+MONGO_URI = "mongodb+srv://alexanderpascual110:alex0606@cluster0.moyfkit.mongodb.net/?appName=Cluster0"
 
 try:
 
